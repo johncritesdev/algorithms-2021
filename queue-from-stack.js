@@ -12,9 +12,9 @@ class Stack {
   };
 
   peek() {
-    this.data[this.data.length - 1];
+    return this.data[this.data.length - 1];
   };
-}
+};
 
 class Queue {
   constructor() {
@@ -40,24 +40,20 @@ class Queue {
   }
 
   peek() {
-    while (this.first.peek()) {
-      this.second.push(this.first.pop());
-    }
-
-    const record = this.second.peek();
-
-    while (this.second.peek()) {
-      this.first.push(this.second.pop());
-    }
-    return record;
+    return this.second.peek();
   }
-}
+};
+
+const s = new Stack();
+s.push(1)
+s.push(2)
+s.push(3)
+// s.pop()
+console.log(s)
 
 const q = new Queue();
 q.add(1);
 q.add(2);
-q.peek(1);
-q.remove(1);
-q.remove();
+q.add(3);
+// q.remove()
 console.log(q);
-
