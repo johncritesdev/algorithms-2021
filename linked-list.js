@@ -10,8 +10,18 @@ class LinkedList {
   constructor() {
     this.head = null;
   }
+
+  insertFirst(data) {
+    this.head = new Node(data, this.head);
+  }
 }
 
+const node1 = new Node(5);
 const list = new LinkedList();
-list.head = new Node(10);
-console.log(list)
+list.head = node1;
+list.insertFirst(15);
+list
+
+// const list = new LinkedList();
+// list.head = new Node(10);
+// console.log(list)
