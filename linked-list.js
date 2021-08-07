@@ -25,6 +25,10 @@ class LinkedList {
     }
     return counter;
   }
+
+  getFirst() {
+    return this.head;
+  }
 }
 
 const node1 = new Node(5);
