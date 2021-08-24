@@ -19,8 +19,6 @@ class Trees {
   constructor() {
     this.root = null;
   }
-
-
 }
 //node test
 // const n = new Node('a');
